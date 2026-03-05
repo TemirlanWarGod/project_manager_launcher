@@ -25,14 +25,14 @@ class ProjectLauncher:
             },
             {
                 'name': 'project_3(Kluchnikova)',
-                'description': 'Программа на C++',
-                'file': 'main.cpp',
+                'description': 'Лабораторная работа на C++',
+                'file': 'klyuchnicova.cpp',
                 'language': 'cpp'
             },
             {
                 'name': 'project_4(Chnegov)',
                 'description': 'Лабораторная работа на C++',
-                'file': 'Лабораторная робота№2№2.cpp',
+                'file': 'chnrgov.cpp',
                 'language': 'cpp'
             }
         ]
