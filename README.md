@@ -4,25 +4,25 @@
 
 ## 📁 Структура проекта
 
-project_manager/
-  ├── launcher.py # Python-лаунчер (кросс-платформенный)
-  ├── README
-  ├── project_1(Semianov)/
-    └── main.c #Программа на С
-  ├── project_2(Dushanov)/
-    ├── main.py
-    ├── config.py
-    ├── database.py
-    ├── handlers.py
-    ├── keyboards.py
-    ├── run.py # Telegram_бот на Python
-    └── database/
-      ├── numbers.json
-      └── users.json
-    ├── project_3(Kluchnikova)/
-      └── kludhnikova.cpp # Программа на C++
-    └── project_4(Chnegov)/
-      └── chnegov.cpp # Лабораторная на C++
+project_manager/  
+  ├── launcher.py # Python-лаунчер  
+  ├── README  
+  ├── project_1(Semianov)/    
+  |  └── main.c #Программа на С  
+  ├── project_2(Dushanov)/  
+  |  ├── main.py  
+  |  ├── config.py  
+  |  ├── database.py  
+  |  ├── handlers.py  
+  |  ├── keyboards.py  
+  |  ├── run.py # Telegram_бот на Python  
+  |  └── database/  
+  |    ├── numbers.json  
+  |    └── users.json  
+  ├── project_3(Kluchnikova)/  
+  |  └── kludhnikova.cpp # Программа на C++  
+  └── project_4(Chnegov)/  
+  |  └── chnegov.cpp # Лабораторная на C++  
 
 ## 🛠️ Проекты
 
@@ -36,13 +36,13 @@ project_manager/
 python launcher.py
 
 ## 📋 Требования
-Для C/C++ проектов: GCC/G++ компилятор
-Для Python проектов: Python 3.7+ и библиотеки:
+Для C/C++ проектов: GCC/G++ компилятор  
+Для Python проектов: Python 3.7+ и библиотеки:  
   aiogram и aiohttp (pip install aiogram aiohttp)
 
 ## 👥 Авторы
-Semianov Alexander - проект 1
-Dushanov Temirlan - проект 2
-Kluchnikova Polina - проект 3
-Chnegov Ruslan - проект 4
+Semianov Alexander - проект 1  
+Dushanov Temirlan - проект 2 + лаунчер  
+Kluchnikova Polina - проект 3  
+Chnegov Ruslan - проект 4  
 
