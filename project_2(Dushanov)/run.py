@@ -155,7 +155,7 @@ def run_bot_direct():
         # Подключение роутеров
         dp.include_router(router)
         
-        print_colored("✅ Бот успешно запущен! Нажмите Ctrl+C для остановки.", GREEN)
+        print_colored("✅ Бот @tester_TWG_BOT успешно запущен! Нажмите Ctrl+C для остановки.", GREEN)
         
         # Запуск бота
         asyncio.run(dp.start_polling(bot))
