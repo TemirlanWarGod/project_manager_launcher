@@ -25,20 +25,21 @@ void pushBack(Node*& head, int val) {//объяв ф-ии которая не в
 //ввод с клавиатуры
 void inputList(Node*& head, const string& listName) {//объявление ф-ии ввода
     int count;//переменная для хранения кол-ва элементов
-    cout << "\n        Список"<< listName <<"    \n";//заголовок секции ввода
-    cout << "количество чисел в списке? ";
+    cout << "\n        List"<< listName <<"    \n";//заголовок секции ввода
+    cout << "the number of numbers in the list? ";
     cin >> count;//считывание числа с клав в переменную count
     if (count <= 0) {//проверка на отрицательные числа
-        cout << "Список " << listName << " останется пустым\n";
+        cout << "list " << listName << " it will remain empty\n";
         return;
     }
-    cout << "Введите " << count << " чисел через пробел:\n";
-    for (int i = 0; i < count; i++) {//запускаем цикл столько сколько count
+    cout << "Enter " << count << " numbers separated by a space:\n";
+    for (int i = 0; i < count; i++) 
+    {                                 //запускаем цикл столько сколько count
         int val;//переменная для текущ числа
         cin >> val;//одно число с клав
         pushBack(head, val); //вызывает ф-ию добавления элемента в конец списка
     }
-    cout << "Список " << listName << " заполнен \n";
+    cout << "List" << listName << " filled in \n";
 }
 //проверка наличия значения в списке
 bool exists(Node* head, int val) {//объяв ф-ию возвращенную положит или отриц
@@ -69,7 +70,7 @@ Node* intersection(Node* list1, Node* list2) {//ф-ия возвращающая
 void printList(Node* head, const string& name) {//ф-ия вывода
     cout << name << ": ";//выводит список 
     if (head == nullptr) {//проверка на пустоту
-        cout << "[ Пусто ]";//если пусто 
+        cout << "[ Empty]";//если пусто 
     } else {
         cout << "(";
         Node* p = head;//рабочий указатель для обхода
@@ -98,21 +99,21 @@ int main() {//вход в программу
     Node* listA = nullptr;
     Node* listB = nullptr;
     //пользователь вводит данные о списках
-    inputList(listA, "№1");
-    inputList(listB, "№2");
+    inputList(listA, "No. 1");
+    inputList(listB, "No. 2");
     //вывод изначальных списков 
-    cout << "\n    ДАННЫЕ О СПИСКАХ    \n";
+    cout << "\n    INFORMATION ABOUT THE LISTS   \n";
     //показывает что было введено ранее
-    printList(listA, "Список №1");
-    printList(listB, "Список №2");
+    printList(listA, "List No. 1");
+    printList(listB, "List No. 2");
     Node* listResult = intersection(listA, listB);//вычислили пересечения между списками
     //вывели результат
-    cout << "\n      РЕЗУЛЬТАТ      \n";
-    printList(listResult, "Пересечение списка №1 и №2");
+    cout << "\n      result      \n";
+    printList(listResult, "Intersection of list No. 1 and No. 2");
     // Очистка памяти
     clearList(listA);
     clearList(listB);
     clearList(listResult);
-    cout << "\nПамять очищена,программа завершена\n";
+    cout << "\nThe memory is cleared, the program is completed\n";
     return 0;
 }
