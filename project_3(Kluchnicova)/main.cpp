@@ -1,4 +1,4 @@
-﻿/*Функция получает линейный массив целых, находит в нем последовательности подряд
+﻿﻿/*Функция получает линейный массив целых, находит в нем последовательности подряд
 возрастающих значений и возвращает их в динамическом массиве указателей на линейные
 массивы(аналог двумерного массива).В каждом из линейных динамических массивов
 содержится копия возрастающей последовательности, начиная с индекса 1, а под индексом
@@ -7,12 +7,12 @@
 using namespace std;
 
 int** findUpingSequences(int* inArr, int inSize, int& outCount) {
-    
+
     if (inSize <= 0) {
         outCount = 0;
         return nullptr;
     }
-    
+
     outCount = 0;
     for (int i = 0; i < inSize; ) {
         outCount++;
@@ -29,11 +29,11 @@ int** findUpingSequences(int* inArr, int inSize, int& outCount) {
             i++;
         }
         int length = (i - startSeq + 1) + 1;
-        
+
         result[currentSeq] = new int[length];
         result[currentSeq][0] = length - 1;
 
-        
+
         for (int j = 0; j < length; j++) {
             result[currentSeq][j + 1] = inArr[startSeq + j];
         }
@@ -73,5 +73,5 @@ int main() {
     }
     delete[] sequences;
     delete[] arr;
-    return 0;
+    system("pause");
 }
