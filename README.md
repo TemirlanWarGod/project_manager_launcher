@@ -5,25 +5,24 @@
 ## 📁 Структура проекта
 
 project_manager/
-├── launcher.py # Python-лаунчер (кросс-платформенный)
-├── README
-└── projects/
-├── project_1(Semianov)/
-│ └── main.c #Программа на С
-├── project_2(Dushanov)/
-│ ├── main.py
-│ ├── config.py
-│ ├── database.py
-│ ├── handlers.py
-│ ├── keyboards.py
-│ ├── run.py # Telegram_бот на Python
-│ └── database/
-│ ├── numbers.json
-│ └── users.json
-├── project_3(Kluchnikova)/
-│ └── kludhnikova.cpp # Программа на C++
-└── project_4(Chnegov)/
-└── chnegov.cpp # Лабораторная на C++
+  ├── launcher.py # Python-лаунчер (кросс-платформенный)
+  ├── README
+  ├── project_1(Semianov)/
+    └── main.c #Программа на С
+  ├── project_2(Dushanov)/
+    ├── main.py
+    ├── config.py
+    ├── database.py
+    ├── handlers.py
+    ├── keyboards.py
+    ├── run.py # Telegram_бот на Python
+    └── database/
+      ├── numbers.json
+      └── users.json
+    ├── project_3(Kluchnikova)/
+      └── kludhnikova.cpp # Программа на C++
+    └── project_4(Chnegov)/
+      └── chnegov.cpp # Лабораторная на C++
 
 ## 🛠️ Проекты
 
