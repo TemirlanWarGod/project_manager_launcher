@@ -1,8 +1,8 @@
-##Project Manager Launcher 🚀
+## Project Manager Launcher 🚀
 
 Мультиязычный лаунчер для запуска проектов на C, C++ и Python.
 
-##📁 Структура проекта
+## 📁 Структура проекта
 
 project_manager/
 ├── launcher.py # Python-лаунчер (кросс-платформенный)
