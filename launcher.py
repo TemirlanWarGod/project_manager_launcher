@@ -31,16 +31,16 @@ class ProjectLauncher:
                 'name': 'project_3(Kluchnicova)',
                 'folder': 'project_3(Kluchnicova)',
                 'description': 'Лабораторная работа на C++',
-                'file': 'klyuchnikova.cpp',  # Исходный файл
-                'executable': 'lab3.exe',  # Исполняемый файл
+                'file': 'main.cpp',  # Исходный файл
+                'executable': 'bez_pol.exe',  # Исполняемый файл
                 'language': 'cpp'
             },
             {
                 'name': 'Project_4(Chnegov)',
                 'folder': 'Project_4(Chnegov)',
                 'description': 'Лабораторная работа на C++',
-                'file': 'chnegov.cpp',  # Исходный файл
-                'executable': 'bez_ch.exe',  # Исполняемый файл
+                'file': 'Chnegov.cpp',  # Исходный файл
+                'executable': 'Chnegov.exe',  # Исполняемый файл
                 'language': 'cpp'
             }
         ]
