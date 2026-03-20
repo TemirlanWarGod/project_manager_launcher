@@ -51,19 +51,38 @@ bool exists(Node* head, int val) {//объяв ф-ию возвращенную 
     } while (p != head);//проверка на возвращение к началу
     return false;
 }
-//пересечение списков
+//разные числа списков (симметрическая разность)
 Node* intersection(Node* list1, Node* list2) {//ф-ия возвращающая указатель на новый список
     Node* result = nullptr;//создание пустого заголовка для результ
-    if (list1 == nullptr) return nullptr;//если первый пуст то пересечения не будет
-    Node* p1 = list1;//указатель для обхода первого списка
-    do {
-        int val = p1->value;//запомнили значение текущего элемента
-        //если есть во 2 и нет в результ
-        if (exists(list2, val) && !exists(result, val)) {//проверка двух условий есть ли число в списке? и нету ли его в результате?
-            pushBack(result, val);//если все верно то добавляем
-        }
-        p1 = p1->next;//следующий элемент первого списка
-    } while (p1 != list1);//повторяем пока не вернемся к началу
+    //если оба пустые то результат пустой
+    if (list1 == nullptr && list2 == nullptr) return nullptr;
+    
+    //Проходим по первому списку: добавляем те, которых нет во втором
+    if (list1 != nullptr) {
+        Node* p1 = list1;//указатель для обхода первого списка
+        do {
+            int val = p1->value;//запомнили значение текущего элемента
+            //если нет во втором и нет в результ
+            if (!exists(list2, val) && !exists(result, val)) {//проверка двух условий: нет ли числа во втором списке? и нету ли его в результате?
+                pushBack(result, val);//если все верно то добавляем
+            }
+            p1 = p1->next;//следующий элемент первого списка
+        } while (p1 != list1);//повторяем пока не вернемся к началу
+    }
+    
+    //Проходим по второму списку: добавляем те, которых нет в первом
+    if (list2 != nullptr) {
+        Node* p2 = list2;//указатель для обхода второго списка
+        do {
+            int val = p2->value;//запомнили значение текущего элемента
+            //если нет в первом и нет в результ
+            if (!exists(list1, val) && !exists(result, val)) {//проверка двух условий: нет ли числа в первом списке? и нету ли его в результате?
+                pushBack(result, val);//если все верно то добавляем
+            }
+            p2 = p2->next;//следующий элемент второго списка
+        } while (p2 != list2);//повторяем пока не вернемся к началу
+    }
+    
     return result;
 }
 //вывод списка
@@ -106,10 +125,10 @@ int main() {//вход в программу
     //показывает что было введено ранее
     printList(listA, "List No. 1");
     printList(listB, "List No. 2");
-    Node* listResult = intersection(listA, listB);//вычислили пересечения между списками
+    Node* listResult = intersection(listA, listB);//вычислили разные числа между списками
     //вывели результат
     cout << "\n      result      \n";
-    printList(listResult, "Intersection of list No. 1 and No. 2");
+    printList(listResult, "Different elements of list No. 1 and No. 2");
     // Очистка памяти
     clearList(listA);
     clearList(listB);
